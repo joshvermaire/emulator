@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var path    = require('path'),
+    fs      = require('fs'),
+    program = require('commander');
+
+program
+  .version(require('../package.json').version)
+  .usage('[options]')
+  .option('-p, --port', 'specify a port')
+  .option('-C, --cors', 'disable cross-origin resource sharing')
+  .option('-R, --redirect', 'disable redirect route')
+  .option('-W, --wait', 'disable wait route')
+  .option('-S, --status', 'disable http status code route')
+  .parse(process.argv);
+
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+require(lib + '/emulator')(program);

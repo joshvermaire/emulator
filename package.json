@@ -1,0 +1,34 @@
+{
+  "name": "emulator",
+  "version": "0.1.0",
+  "description": "A simple server for emulating an API",
+  "author": "Josh Vermaire <joshvermaire@gmail.com>",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshvermaire/emulator"
+  },
+  "main": "index.js",
+  "bin": {
+    "emulator": "./bin/emulator"
+  },
+  "keywords": [
+    "prototyping",
+    "api",
+    "response",
+    "error"
+  ],
+  "dependencies": {
+    "router": "*",
+    "qs": "*",
+    "commander": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshvermaire/emulator/issues"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 0.6.x"
+  }
+}
