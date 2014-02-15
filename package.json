@@ -1,34 +1,36 @@
 {
-  "name": "emulator",
-  "version": "0.1.0",
-  "description": "A simple server for emulating an API",
-  "author": "Josh Vermaire <joshvermaire@gmail.com>",
-  "preferGlobal": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joshvermaire/emulator"
-  },
-  "main": "index.js",
-  "bin": {
-    "emulator": "./bin/emulator"
-  },
-  "keywords": [
-    "prototyping",
-    "api",
-    "response",
-    "error"
-  ],
-  "dependencies": {
-    "router": "*",
-    "qs": "*",
-    "commander": "*"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joshvermaire/emulator/issues"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": ">= 0.6.x"
-  }
+    "name": "emulator",
+    "version": "0.1.0",
+    "description": "A simple server for emulating an API",
+    "author": "Josh Vermaire <joshvermaire@gmail.com>",
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt test",
+        "start": "node index.js"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "dependencies": {
+        "kraken-js": "~0.7.0",
+        "express": "~3.4.4",
+        "adaro": "~0.1.x",
+        "nconf": "~0.6.8",
+        "less": "~1.6.1",
+        "dustjs-linkedin": "~2.0.3",
+        "dustjs-helpers": "~1.1.1",
+        "makara": "~0.3.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.17.0",
+        "supertest": "~0.8.2",
+        "grunt": "~0.4.1",
+        "grunt-contrib-less": "~0.9.0",
+        "grunt-dustjs": "~1.2.0",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-jshint": "~0.6.4",
+
+        "grunt-mocha-cli": "~1.5.0",
+        "grunt-copy-to": "0.0.10"
+    }
 }
