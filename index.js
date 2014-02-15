@@ -2,6 +2,7 @@
 
 
 var kraken = require('kraken-js'),
+    params = require('express-params'),
     app = {};
 
 
@@ -18,6 +19,17 @@ app.requestStart = function requestStart(server) {
 
 app.requestBeforeRoute = function requestBeforeRoute(server) {
     // Run before any routes have been added.
+
+    params.extend(server);
+
+    server.use(function(req, res, next) {
+
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        if (req.method == 'OPTIONS') return res.end();
+        next();
+    });
 };
 
 
