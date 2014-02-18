@@ -29,17 +29,17 @@
 //         }
 //     }
 // },
-// "express": {
-//     "x-powered-by": false,
-//     "trust proxy": false,
-//     "jsonp callback name": null,
-//     "json replacer": null,
-//     "json spaces": 0,
-//     "case sensitive routing": false,
-//     "strict routing": false,
-//     "view cache": true,
-//     "view engine": "js",
-//     "views": "path:./.build/templates"
-// }
+    "express": {
+        // "x-powered-by": false,
+        // "trust proxy": false,
+        // "jsonp callback name": null,
+        // "json replacer": null,
+        "json spaces": 0
+        // "case sensitive routing": false,
+        // "strict routing": false,
+        // "view cache": true,
+        // "view engine": "js",
+        // "views": "path:./.build/templates"
+    }
 
 }
