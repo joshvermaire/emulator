@@ -21,7 +21,7 @@
   "dependencies": {
     "router": "*",
     "qs": "*",
-    "commander": "*"
+    "commander": "2.0.x"
   },
   "license": "MIT",
   "bugs": {
